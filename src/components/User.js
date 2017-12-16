@@ -3,7 +3,11 @@ import {render} from 'react-dom'
 import PropTypes from 'prop-types'
 
 class User extends Component {
-    static propTypes = {};
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        handleLogin: PropTypes.func.isRequired,
+        error: PropTypes.string.isRequired
+    };
 
     render() {
         const { name, error, handleLogin } = this.props;
